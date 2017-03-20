@@ -23,7 +23,8 @@
     "mikey179/vfsstream": "~1.2",
     "phpunit/phpunit": ">=4.8.28 <5",
     "symfony/css-selector": "~2.8",
-    "ec-europa/poc-code-review": "*"
+    "ec-europa/poc-code-review": "*",
+    "ec-europa/poc-behat": "*"
   },
   "conflict": {
     "drupal/drupal": "*"
@@ -45,6 +46,10 @@
     {
       "type": "git",
       "url": "https://github.com/ec-europa/poc-code-review.git"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/ec-europa/poc-behat.git"
     }
   ],
   "scripts": {

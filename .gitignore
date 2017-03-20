@@ -21,6 +21,7 @@
 
 # Ignore local configuration files
 grumphp.yml
+behat.yml
 
 # Ignore composer.lock
 composer.lock
