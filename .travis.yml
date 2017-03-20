@@ -13,6 +13,8 @@ install:
   - composer install
 
 before_script:
+  # Start PhantomJS server.
+  - phantomjs --webdriver=4444 > /dev/null &
   # Set sendmail so drush doesn't throw an error during site install.
   - echo "sendmail_path=`which true`" >> `php --ini | grep "Loaded Configuration" | awk '{print $4}'`
   # Create database.

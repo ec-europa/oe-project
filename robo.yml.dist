@@ -1,0 +1,29 @@
+site:
+  name: Site name
+  mail: info@example.org
+  profile: poc_profile
+  update: false
+  locale: en
+
+account:
+  name: admin
+  password: admin
+  mail: admin@example.org
+
+database:
+  host: localhost
+  port: 3306
+  name: poc_project2
+  user: root
+  password: root
+  prefix: ''
+
+behat:
+  source: resources/behat.yml.dist
+  destination: behat.yml.dist
+  tokens:
+    base_url: http://localhost
+    drupal_root: build
+
+bin:
+  drush: ./vendor/bin/drush
