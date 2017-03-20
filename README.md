@@ -1,5 +1,7 @@
 # Project template
 
+[![Build Status](https://travis-ci.com/ec-europa/poc-project.svg?token=dqSmBxPQnRgBZvpCZAqo&branch=master)](https://travis-ci.com/ec-europa/poc-project)
+
 ## Usage
 
 First you need to [install composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
