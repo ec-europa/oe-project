@@ -13,7 +13,8 @@
     "drush/drush": "~8.0",
     "drupal/console": "~1.0",
     "drupal/coffee": "1.0-beta2",
-    "ec-europa/poc_profile": "*"
+    "ec-europa/poc_profile": "*",
+    "ec-europa/poc-robo": "*"
   },
   "require-dev": {
     "behat/mink": "~1.7",
@@ -24,56 +25,33 @@
     "phpunit/phpunit": ">=4.8.28 <5",
     "symfony/css-selector": "~2.8",
     "ec-europa/poc-code-review": "*",
-    "ec-europa/poc-behat": "*"
+    "ec-europa/poc-behat": "*",
+    "consolidation/robo": "^1.0",
+    "digipolisgent/robo-drupal-console": "~0.1"
   },
   "conflict": {
     "drupal/drupal": "*"
   },
-  "autoload": {
-    "classmap": [
-      "scripts/composer/ScriptHandler.php"
-    ]
-  },
   "repositories": [
-    {
-      "type": "composer",
-      "url": "https://packages.drupal.org/8"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/ec-europa/poc_profile.git"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/ec-europa/poc-code-review.git"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/ec-europa/poc-behat.git"
-    }
+    { "type": "composer", "url": "https://packages.drupal.org/8" },
+    { "type": "git", "url": "https://github.com/ec-europa/poc_profile.git" },
+    { "type": "git", "url": "https://github.com/ec-europa/poc-code-review.git" },
+    { "type": "git", "url": "https://github.com/ec-europa/poc-behat.git" },
+    { "type": "git", "url": "https://github.com/ec-europa/poc-robo.git" },
+    {"type": "path", "url": "../poc-build"}
   ],
   "scripts": {
     "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-    "pre-install-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-    ],
-    "pre-update-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-    ],
-    "post-install-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-    ],
-    "post-update-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-    ]
+    "post-install-cmd": ["@drupal-scaffold"],
+    "post-update-cmd": ["@drupal-scaffold"]
   },
   "extra": {
     "installer-paths": {
-      "web/core": ["type:drupal-core"],
-      "web/libraries/{$name}": ["type:drupal-library"],
-      "web/modules/contrib/{$name}": ["type:drupal-module"],
-      "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-      "web/themes/contrib/{$name}": ["type:drupal-theme"]
+      "build/core": ["type:drupal-core"],
+      "build/libraries/{$name}": ["type:drupal-library"],
+      "build/modules/contrib/{$name}": ["type:drupal-module"],
+      "build/profiles/contrib/{$name}": ["type:drupal-profile"],
+      "build/themes/contrib/{$name}": ["type:drupal-theme"]
     }
   }
 }
