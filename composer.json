@@ -35,7 +35,9 @@
     { "type": "git", "url": "https://github.com/ec-europa/poc_profile.git" },
     { "type": "git", "url": "https://github.com/ec-europa/poc-code-review.git" },
     { "type": "git", "url": "https://github.com/ec-europa/poc-behat.git" },
-    { "type": "git", "url": "https://github.com/ec-europa/poc-robo.git" }
+    { "type": "git", "url": "https://github.com/ec-europa/poc-robo.git" },
+    { "type": "path", "url": "./custom/modules"},
+    { "type": "path", "url": "./custom/themes"}
   ],
   "scripts": {
     "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
