@@ -1,29 +1,16 @@
-# Project template
+# Europa Project Template
 
 [![Build Status](https://travis-ci.com/ec-europa/poc-project.svg?token=dqSmBxPQnRgBZvpCZAqo&branch=master)](https://travis-ci.com/ec-europa/poc-project)
 
-## Usage
+## Installation
 
-First you need to [install composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
-
-After that clone this repository and run:
+After [installing Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) run:
 
 ```
 composer install
 ```
 
-With `composer require ...` you can download new dependencies to your installation.
-
-```
-composer require drupal/devel:~1.0
-```
-
-## Installation
-
-Copy relevant properties from `robo.yml.dist` to `robo.yml` and change their values according to your local setup.
-
-For more information about how to work with Robo configuration check out the [POC Robo](https://github.com/ec-europa/poc-robo)
-component.
+Then copy relevant properties from `robo.yml.dist` to `robo.yml` and change their values according to your local setup.
 
 To install the project run:
 
@@ -32,6 +19,17 @@ $ ./vendor/bin/robo project:install
 ```
 
 Your Drupal project will be then installed in the `./build` directory.
+
+For more information about how to work with Robo configuration check out the [POC Robo](https://github.com/ec-europa/poc-robo)
+component.
+
+## Add external dependencies
+
+Add external dependencies, like contributed modules, PHP libraries, etc., using `composer require`:
+
+```
+composer require drupal/devel:~1.0
+```
 
 ## Add custom projects
 
@@ -46,17 +44,17 @@ a local `composer.json` file like the one below:
 }
 ```
 
-After that add them to the `composer.json` as below and run `composer update`:
+After that add them to `composer.json` like shown below and run `composer update`:
 
 ```json
-  ...
   "require": {
-    ...
     "my-repo/my_module": "*"
   }
 ```
 
-## Working with tests
+This will symlink your custom projects to destinations specified in the `installer-paths` section.
+
+## Run tests
 
 To setup Behat tests run:
 
@@ -72,7 +70,7 @@ $ ./vendor/bin/behat
 
 ## Apply patches
 
-If you need to apply patches you can do so with the  [composer-patches](https://github.com/cweagans/composer-patches) plugin.
+If you need to apply patches you can do so with the [composer-patches](https://github.com/cweagans/composer-patches) plugin.
 
 To patch a Drupal projects insert the `patches` section in the `extra` section of `composer.json`:
 
