@@ -1,3 +1,4 @@
+# Site information.
 site:
   name: Site name
   mail: info@example.org
@@ -5,25 +6,30 @@ site:
   update: false
   locale: en
 
+# Administrator account.
 account:
   name: admin
   password: admin
   mail: admin@example.org
 
+# Database parameters.
 database:
   host: localhost
   port: 3306
-  name: poc_project2
+  name: drupal
   user: root
   password: root
   prefix: ''
 
+# Behat settings.
 behat:
-  source: resources/behat.yml.dist
-  destination: behat.yml.dist
+  # Behat configuration template.
+  source: behat.yml.dist
+  # Resulting Behat configuration file after performing token replacement.
+  destination: behat.yml
+  # Following tokens will be automatically replaced when running "project:setup-behat".
   tokens:
-    base_url: http://localhost
-    drupal_root: build
+    !base_url: http://localhost
 
 bin:
   drush: ./vendor/bin/drush
