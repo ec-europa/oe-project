@@ -22,6 +22,7 @@ before_script:
   - './vendor/bin/robo project:setup-behat -o "behat.tokens._base_url: http://127.0.0.1:8888"'
   - './vendor/bin/robo project:install -o "database.user: travis"'
   # Run Drush web server.
+  - cd build
   - ../vendor/bin/drush --debug runserver :8888 > ~/debug.txt 2>&1 &
   - sleep 4s
 
