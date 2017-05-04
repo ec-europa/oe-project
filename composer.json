@@ -9,9 +9,10 @@
     "composer/installers": "^1.2",
     "drupal-composer/drupal-scaffold": "^2.2",
     "cweagans/composer-patches": "~1.0",
-    "drupal/core": "~8.0",
     "drush/drush": "~8.0",
+    "drupal/core": "~8.0",
     "drupal/console": "~1.0",
+    "drupal/config_installer": "1.4",
     "drupal/coffee": "1.0-beta2",
     "ec-europa/poc_profile": "*",
     "ec-europa/poc-robo": "*"

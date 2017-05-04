@@ -33,3 +33,7 @@ behat:
 
 bin:
   drush: ./vendor/bin/drush
+
+settings:
+  config_directories:
+    sync: ../config/sync

@@ -47,9 +47,9 @@ a local `composer.json` file like the one below:
 After that add them to `composer.json` like shown below and run `composer update`:
 
 ```json
-  "require": {
-    "my-repo/my_module": "*"
-  }
+"require": {
+  "my-repo/my_module": "*"
+}
 ```
 
 This will symlink your custom projects to destinations specified in the `installer-paths` section.
