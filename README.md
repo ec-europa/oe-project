@@ -38,7 +38,7 @@ a local `composer.json` file like the one below:
 
 ```json
 {
-  "name": "my-repo/my_module",
+  "name": "my_project/my_module",
   "description": "My module description.",
   "type": "drupal-module"
 }
@@ -48,7 +48,7 @@ After that add them to `composer.json` like shown below and run `composer update
 
 ```json
 "require": {
-  "my-repo/my_module": "*"
+  "my_project/my_module": "*"
 }
 ```
 
