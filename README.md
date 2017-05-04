@@ -12,7 +12,7 @@ composer install
 
 Then copy relevant properties from `robo.yml.dist` to `robo.yml` and change their values according to your local setup.
 
-To install the project run:
+To install the project from scratch run:
 
 ```
 $ ./vendor/bin/robo project:install
@@ -22,6 +22,14 @@ Your Drupal project will be then installed in the `./build` directory.
 
 For more information about how to work with Robo configuration check out the [POC Robo](https://github.com/ec-europa/poc-robo)
 component.
+
+## Install from existing configuration
+
+To install the project from existing configuration run:
+
+```
+$ ./vendor/bin/robo project:install-config
+```
 
 ## Add external dependencies
 
