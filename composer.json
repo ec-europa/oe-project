@@ -15,6 +15,7 @@
     "drupal/config_installer": "1.4",
     "drupal/coffee": "1.0-beta2",
     "ec-europa/poc_profile": "*",
+    "ec-europa/poc_core": "*",
     "ec-europa/poc_theme": "*",
     "ec-europa/poc-robo": "*"
   },
@@ -39,6 +40,7 @@
     { "type": "git", "url": "https://github.com/ec-europa/poc-behat.git" },
     { "type": "git", "url": "https://github.com/ec-europa/poc-robo.git" },
     { "type": "git", "url": "https://github.com/ec-europa/poc_theme" },
+    { "type": "git", "url": "https://github.com/ec-europa/poc_core" },
     { "type": "path", "url": "./custom/modules/*"},
     { "type": "path", "url": "./custom/themes/*"}
   ],
