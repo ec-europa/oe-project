@@ -1,0 +1,44 @@
+workspace:
+  base: /test
+  path: d8-poc
+
+services:
+  web:
+    image: fpfis/php56-dev
+    environment:
+     - DOCUMENT_ROOT=/test/d8-poc
+  mysql:
+    image: fpfis/mysql56
+#  selenium:
+#    image: selenium/standalone-chrome
+#  solr:
+#    image: fpfis/solr5
+
+pipeline:
+
+  prepare-mysql:
+    image: fpfis/mysql56
+    commands:
+      - sleep 5
+      - mysqladmin -h mysql -uroot create database
+
+  prepare-php:
+    image: fpfis/php56-dev
+    commands:
+      - php --version
+      - composer install
+
+  github_release:
+    image: plugins/github-release
+    files:
+      - ${DRONE_REPO_NAME}-${DRONE_TAG}.tar.gz
+    checksum:
+      - md5
+      - sha1
+      - sha256
+      - sha512
+      - adler32
+      - crc32
+    secrets: [ GITHUB_RELEASE_API_KEY ]
+    when:
+      event: tag
