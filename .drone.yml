@@ -51,3 +51,29 @@ pipeline:
     secrets: [ GITHUB_RELEASE_API_KEY ]
     when:
       event: tag
+
+  slack-notify-build:
+    image: plugins/slack
+    channel: ci
+    secrets:
+      - source: slack_webhook
+        target: webhook
+    template: >
+      {{#success build.status}}
+        build {{build.number}} succeeded. Good job.
+      {{else}}
+        build {{build.number}} failed. Fix me please.
+      {{/success}}
+
+  slack-notify-tag:
+    image: plugins/slack
+    secrets:
+      - source: slack_webhook
+        target: webhook
+    channel: ci
+    when:
+      event: tag
+      status: success
+    template: >
+      Package {{repo.name}}-{{build.tag}}.tar.gz built and available at
+      https://github.com/ec-europa/{{repo.name}}/releases/download/{{build.tag}}/{{repo.name}}-{{build.tag}}.tar.gz
