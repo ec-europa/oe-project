@@ -4,10 +4,10 @@ parameters:
   tasks.phpcs.ignore_patterns:
     - vendor/
     - node_modules/
-    - web/core/
-    - web/modules/contrib/
-    - web/themes/contrib/
-    - web/profiles/contrib/
-    - web/libraries/
-    - web/sites/
-    - web/autoload.php
+    - build/core/
+    - build/modules/contrib/
+    - build/themes/contrib/
+    - build/profiles/contrib/
+    - build/libraries/
+    - build/sites/
+    - build/autoload.php
