@@ -17,7 +17,7 @@
     "ec-europa/poc_profile": "*",
     "ec-europa/poc_core": "*",
     "ec-europa/poc_theme": "*",
-    "ec-europa/poc-robo": "*"
+    "ec-europa/oe-robo": "*"
   },
   "require-dev": {
     "behat/mink": "~1.7",
@@ -37,7 +37,6 @@
     { "type": "composer", "url": "https://packages.drupal.org/8" },
     { "type": "git", "url": "https://github.com/ec-europa/poc_profile.git" },
     { "type": "git", "url": "https://github.com/ec-europa/poc-behat.git" },
-    { "type": "git", "url": "https://github.com/ec-europa/poc-robo.git" },
     { "type": "git", "url": "https://github.com/ec-europa/poc_theme" },
     { "type": "git", "url": "https://github.com/ec-europa/poc_core" },
     { "type": "path", "url": "./custom/modules/*"},

@@ -1,6 +1,6 @@
 <?php
 
-use Europa\Robo\Tasks;
+use EC\OpenEuropa\Robo\Tasks;
 
 /**
  * Class RoboFile.
