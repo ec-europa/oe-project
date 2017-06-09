@@ -1,4 +1,4 @@
-# Europa Project Template
+# OpenEuropa project template
 
 [![Build Status](https://travis-ci.com/ec-europa/poc-project.svg?token=dqSmBxPQnRgBZvpCZAqo&branch=master)](https://travis-ci.com/ec-europa/poc-project)
 
@@ -20,7 +20,7 @@ $ ./vendor/bin/robo project:install
 
 Your Drupal project will be then installed in the `./build` directory.
 
-For more information about how to work with Robo configuration check out the [POC Robo](https://github.com/ec-europa/poc-robo)
+For more information about how to work with Robo configuration check out the [OpenEuropa Robo](https://github.com/ec-europa/oe-robo)
 component.
 
 ## Install from existing configuration

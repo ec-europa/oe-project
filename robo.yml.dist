@@ -2,7 +2,7 @@
 site:
   name: Site name
   mail: info@example.org
-  profile: poc_profile
+  profile: oe_profile
   update: false
   locale: en
 

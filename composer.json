@@ -1,6 +1,6 @@
 {
-  "name": "ec-europa/poc-project",
-  "description": "Drupal 8 proof of concept: Project template.",
+  "name": "ec-europa/oe-project",
+  "description": "OpenEuropa project template.",
   "type": "project",
   "license": "EUPL-1.1",
   "minimum-stability": "dev",
@@ -9,15 +9,15 @@
     "composer/installers": "^1.2",
     "drupal-composer/drupal-scaffold": "^2.2",
     "cweagans/composer-patches": "~1.0",
+    "ec-europa/oe-robo": "*",
     "drush/drush": "~8.0",
     "drupal/core": "~8.0",
     "drupal/console": "~1.0",
     "drupal/config_installer": "1.4",
     "drupal/coffee": "1.0-beta2",
-    "ec-europa/poc_profile": "*",
-    "ec-europa/poc_core": "*",
-    "ec-europa/poc_theme": "*",
-    "ec-europa/oe-robo": "*"
+    "ec-europa/oe_profile": "*",
+    "ec-europa/oe_core": "*",
+    "ec-europa/oe_theme": "*"
   },
   "require-dev": {
     "behat/mink": "~1.7",
@@ -28,17 +28,13 @@
     "phpunit/phpunit": ">=4.8.28 <5",
     "symfony/css-selector": "~2.8",
     "ec-europa/oe-code-review": "*",
-    "ec-europa/poc-behat": "*"
+    "ec-europa/oe-behat": "*"
   },
   "conflict": {
     "drupal/drupal": "*"
   },
   "repositories": [
     { "type": "composer", "url": "https://packages.drupal.org/8" },
-    { "type": "git", "url": "https://github.com/ec-europa/poc_profile.git" },
-    { "type": "git", "url": "https://github.com/ec-europa/poc-behat.git" },
-    { "type": "git", "url": "https://github.com/ec-europa/poc_theme" },
-    { "type": "git", "url": "https://github.com/ec-europa/poc_core" },
     { "type": "path", "url": "./custom/modules/*"},
     { "type": "path", "url": "./custom/themes/*"}
   ],
