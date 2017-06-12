@@ -1,4 +1,4 @@
-![European Commission logo](https://ec.europa.eu//ec_portal/2016/images/logo/logo-splashpage.png)
+![European Commission logo](https://ec.europa.eu/ec_portal/2016/images/logo/logo-splashpage.png)
 
 # Project template
 
@@ -14,5 +14,5 @@ totally decoupled approach by isolating each functionality into a dedicated comp
 - [Europa Component Library Toolkit](https://github.com/ec-europa/ecl-toolkit): Set of tools we use to build our
   front-end components.
 - [Europa Component Library Twig loader](https://github.com/ec-europa/ecl-twig-loader): Twig loader for Europa Component
-  Library, it allows to load components by accessing them via a configurable namespace. module
+  Library, it allows to load components by accessing them via a configurable namespace.
 - [Europa Component Library](https://github.com/ec-europa/europa-component-library): Component library based on Fractal.
