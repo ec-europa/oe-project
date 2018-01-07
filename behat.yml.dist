@@ -13,11 +13,11 @@ default:
       goutte: ~
       selenium2: ~
       javascript_session: selenium2
-      base_url: _base_url
+      base_url: "${drupal.base_url}"
     EC\OpenEuropa\Drupal\DrupalExtension:
       api_driver: "drupal"
       drupal:
-        drupal_root: build
+        drupal_root: "${drupal.root}"
       region_map:
         left sidebar: "#sidebar-first"
         content: "#content"

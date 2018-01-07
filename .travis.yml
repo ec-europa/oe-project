@@ -6,29 +6,22 @@ php:
 
 env:
   global:
-    - PATH=$PATH:/home/travis/.composer/vendor/bin
+    - PATH=$PATH:/home/travis/.composer/vendor/bin:$TRAVIS_BUILD_DIR/vendor/bin
+    - COMPOSER_MEMORY_LIMIT=2G
 
 install:
+  - echo "always_populate_raw_post_data=-1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   - composer self-update
-  - composer install
+  - composer install --prefer-dist
+  - phantomjs --webdriver=4444 > /dev/null &
 
 before_script:
-  # Start PhantomJS server.
-  - phantomjs --webdriver=4444 > /dev/null &
-  # Set sendmail so drush doesn't throw an error during site install.
-  - echo "sendmail_path=`which true`" >> `php --ini | grep "Loaded Configuration" | awk '{print $4}'`
-  # Create database.
-  - mysql -e 'create database drupal'
-  - './vendor/bin/robo project:setup-behat -o "behat.tokens._base_url: http://127.0.0.1:8888"'
-  - './vendor/bin/robo project:install -o "database.user: travis"'
-  # Run Drush web server.
-  - cd build
-  - ../vendor/bin/drush --debug runserver :8888 > ~/debug.txt 2>&1 &
+  - run drupal:site-install
+  - drush --root=$PWD/build --debug runserver :8888 > ~/debug.txt 2>&1 &
   - sleep 4s
 
 script:
-  - cd $TRAVIS_BUILD_DIR
-  - ./vendor/bin/behat
+  - behat
 
 notifications:
   email: false

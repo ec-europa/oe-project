@@ -12,7 +12,7 @@
 # Ignore local configuration files
 grumphp.yml
 behat.yml
-robo.yml
+runner.yml
 
 # Ignore composer.lock
 composer.lock

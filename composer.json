@@ -7,14 +7,12 @@
   "prefer-stable": true,
   "require": {
     "composer/installers": "^1.2",
-    "drupal-composer/drupal-scaffold": "^2.2",
     "cweagans/composer-patches": "~1.0",
-    "ec-europa/oe-robo": "*",
-    "drush/drush": "~8.0",
-    "drupal/core": "~8.0",
-    "drupal/console": "~1.0",
+    "drush/drush": "~9",
     "drupal/config_installer": "1.4",
-    "drupal/coffee": "1.0-beta2",
+    "drupal-composer/drupal-scaffold": "^2.2",
+    "drupal/core": "~8",
+    "drupal/coffee": "~1",
     "ec-europa/oe_profile": "*",
     "ec-europa/oe_core": "*",
     "ec-europa/oe_theme": "*"
@@ -27,7 +25,8 @@
     "mikey179/vfsstream": "~1.2",
     "phpunit/phpunit": ">=4.8.28 <5",
     "symfony/css-selector": "~2.8",
-    "ec-europa/oe-code-review": "*",
+    "ec-europa/oe-code-review": "~0.1",
+    "ec-europa/oe-task-runner": "~0.1",
     "ec-europa/oe-behat": "*"
   },
   "conflict": {

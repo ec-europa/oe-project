@@ -10,25 +10,25 @@ After [installing Composer](https://getcomposer.org/doc/00-intro.md#installation
 composer install
 ```
 
-Then copy relevant properties from `robo.yml.dist` to `robo.yml` and change their values according to your local setup.
+Then copy relevant properties from `runner.yml.dist` to `runner.yml` and change their values according to your local setup.
 
 To install the project from scratch run:
 
 ```
-$ ./vendor/bin/robo project:install
+$ ./vendor/bin/runner drupal:site-install
 ```
 
 Your Drupal project will be then installed in the `./build` directory.
 
-For more information about how to work with Robo configuration check out the [OpenEuropa Robo](https://github.com/ec-europa/oe-robo)
-component.
+For more information about how to work with build configuration check out the [OpenEuropa Task Runner](https://github.com/ec-europa/oe-task-runner)
+project.
 
 ## Install from existing configuration
 
 To install the project from existing configuration run:
 
 ```
-$ ./vendor/bin/robo project:install-config
+$ ./vendor/bin/run drupal:site-install-config
 ```
 
 ## Add external dependencies
@@ -67,7 +67,7 @@ This will symlink your custom projects to destinations specified in the `install
 To setup Behat tests run:
 
 ```
-$ ./vendor/bin/robo project:setup-behat
+$ ./vendor/bin/run drupal:setup-behat
 ```
 
 Then simply run:
