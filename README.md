@@ -1,6 +1,6 @@
 # OpenEuropa project template
 
-[![Build Status](https://travis-ci.com/ec-europa/oe-project.svg?token=dqSmBxPQnRgBZvpCZAqo&branch=master)](https://travis-ci.com/ec-europa/oe-project)
+[![Build Status](https://travis-ci.org/ec-europa/oe-project.svg?branch=master)](https://travis-ci.org/ec-europa/oe-project)
 
 ## Installation
 
