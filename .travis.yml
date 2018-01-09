@@ -16,6 +16,7 @@ install:
   - phantomjs --webdriver=4444 > /dev/null &
 
 before_script:
+  - run drupal:site-setup
   - run drupal:site-install
   - drush --root=$PWD/build --debug runserver :8888 > ~/debug.txt 2>&1 &
   - sleep 4s

@@ -45,8 +45,8 @@
   },
   "scripts": {
     "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-    "post-install-cmd": ["@drupal-scaffold", "./vendor/bin/run drupal:site-setup"],
-    "post-update-cmd": ["@drupal-scaffold", "./vendor/bin/run drupal:site-setup"]
+    "post-install-cmd": ["@drupal-scaffold"],
+    "post-update-cmd": ["@drupal-scaffold"]
   },
   "extra": {
     "installer-paths": {
