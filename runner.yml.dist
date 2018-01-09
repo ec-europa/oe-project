@@ -1,9 +1,19 @@
 drupal:
   root: "build"
   base_url: "http://127.0.0.1:8888"
+  site:
+    name: "OpenEuropa Project"
+    mail: "info@example.org"
+    # Change to "config_installer" if you want to install your site from configuration stored in "../config/sync".
+    profile: "oe_profile"
+    update: "false"
+    locale: "en"
   database:
     host: "127.0.0.1"
     port: "3306"
     name: "drupal"
     user: "root"
     password: ""
+  settings:
+    config_directories:
+      sync: '../config/sync'

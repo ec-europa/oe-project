@@ -10,6 +10,7 @@
 /dist/
 
 # Ignore local configuration files
+phpunit.xml
 grumphp.yml
 behat.yml
 runner.yml

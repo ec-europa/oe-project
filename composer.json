@@ -8,23 +8,22 @@
   "require": {
     "composer/installers": "^1.2",
     "cweagans/composer-patches": "~1.0",
-    "drush/drush": "~9",
+    "drupal/core": "~8",
     "drupal/config_installer": "~1.5",
     "drupal-composer/drupal-scaffold": "^2.2",
-    "drupal/core": "~8",
-    "drupal/coffee": "~1",
-    "ec-europa/oe_profile": "*",
-    "ec-europa/oe_core": "*",
-    "ec-europa/oe_theme": "*"
+    "ec-europa/oe_profile": "dev-master",
+    "ec-europa/oe_core": "dev-master",
+    "ec-europa/oe_theme": "dev-master"
   },
   "require-dev": {
+    "drupal/console": "~1",
+    "drush/drush": "~9",
     "behat/mink": "~1.7",
     "behat/mink-goutte-driver": "~1.2",
     "jcalderonzumba/gastonjs": "~1.0.2",
     "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
     "mikey179/vfsstream": "~1.2",
-    "phpunit/phpunit": ">=4.8.28 <5",
-    "symfony/css-selector": "~2.8",
+    "phpunit/phpunit": "~5",
     "ec-europa/oe-code-review": "~0.1",
     "ec-europa/oe-task-runner": "dev-master",
     "ec-europa/oe-behat": "dev-master"
@@ -33,9 +32,10 @@
     "drupal/drupal": "*"
   },
   "repositories": [
-    { "type": "composer", "url": "https://packages.drupal.org/8" },
-    { "type": "path", "url": "./custom/modules/*"},
-    { "type": "path", "url": "./custom/themes/*"}
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
   ],
   "scripts": {
     "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
