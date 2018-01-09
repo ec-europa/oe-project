@@ -18,10 +18,6 @@
   "require-dev": {
     "drupal/console": "~1",
     "drush/drush": "~9",
-    "behat/mink": "~1.7",
-    "behat/mink-goutte-driver": "~1.2",
-    "jcalderonzumba/gastonjs": "~1.0.2",
-    "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
     "mikey179/vfsstream": "~1.2",
     "phpunit/phpunit": "~5",
     "ec-europa/oe-code-review": "~0.1",
@@ -37,6 +33,16 @@
       "url": "https://packages.drupal.org/8"
     }
   ],
+  "autoload": {
+    "psr-4": {
+      "EC\\OpenEuropa\\Project\\": "./src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "EC\\OpenEuropa\\Project\\Tests\\": "./tests/"
+    }
+  },
   "scripts": {
     "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
     "post-install-cmd": ["@drupal-scaffold", "./vendor/bin/run drupal:site-setup"],
