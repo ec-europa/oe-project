@@ -8,7 +8,7 @@
   "require": {
     "composer/installers": "^1.2",
     "cweagans/composer-patches": "~1.0",
-    "drupal/core": "~8",
+    "drupal/core": "8.5.x-dev",
     "drupal/config_installer": "~1.5",
     "drupal-composer/drupal-scaffold": "^2.2",
     "ec-europa/oe_profile": "dev-master",
