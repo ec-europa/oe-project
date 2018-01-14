@@ -20,8 +20,8 @@
     "drush/drush": "~9",
     "mikey179/vfsstream": "~1.2",
     "phpunit/phpunit": "~5",
-    "ec-europa/oe-code-review": "~0.1",
-    "ec-europa/oe-task-runner": "dev-master",
+    "ec-europa/oe-code-review": "^0.1",
+    "ec-europa/oe-task-runner": "^0.3",
     "ec-europa/oe-behat": "dev-master"
   },
   "conflict": {
