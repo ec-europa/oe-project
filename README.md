@@ -1,3 +1,5 @@
+**Abandoned. Check the [OpenEuropa project](https://github.com/openeuropa/openeuropa) for more information.**
+
 # OpenEuropa project template
 
 [![Build Status](https://travis-ci.org/ec-europa/oe-project.svg?branch=master)](https://travis-ci.org/ec-europa/oe-project)
